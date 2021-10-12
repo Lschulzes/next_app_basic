@@ -16,7 +16,7 @@ function HomePage(props) {
 
 export const getStaticProps = async () => {
   const client = await MongoClient.connect(
-    "mongodb+srv://lschulzes:code101adm@nextbasic.fv9wq.mongodb.net/meetups?retryWrites=true&w=majority"
+    "mongodb+srv://hijuraldo:justatest123@nextbasic.fv9wq.mongodb.net/meetups?retryWrites=true&w=majority"
   );
   const db = client.db();
 
@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
         id: meetup._id.toString(),
       })),
     },
-    revalidate: 3600,
+    revalidate: 60,
   };
 };
 
